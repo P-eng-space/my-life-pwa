@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1769d2">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="My Life">
+<meta name="description" content="個人生活管理：考試、默書、功課、籃球及每週時間表">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>My Life｜生活管理</title>
+<style>
+:root{--blue:#1769d2;--blue2:#eaf3ff;--navy:#12345a;--ink:#18283d;--muted:#6b7b90;--line:#e4ebf3;--bg:#f4f8fd;--white:#fff;--green:#16865b;--red:#c44b55;--shadow:0 8px 26px rgba(23,70,125,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding-bottom:calc(82px + env(safe-area-inset-bottom))}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:auto;min-height:100vh}.top{padding:22px 18px 16px;background:linear-gradient(135deg,#1769d2,#3b91ee);color:white;border-radius:0 0 26px 26px}.topline{display:flex;justify-content:space-between;align-items:center}.brand{font-size:23px;font-weight:800;letter-spacing:.2px}.date{font-size:12px;opacity:.9;margin-top:5px}.avatar{width:42px;height:42px;border-radius:14px;background:#ffffff25;display:grid;place-items:center;font-size:22px}.container{padding:16px}.greeting{font-size:19px;font-weight:750;margin:2px 0 12px}.sub{color:var(--muted);font-size:13px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:14px 0}.stat{background:white;border:1px solid var(--line);border-radius:16px;padding:13px 11px;box-shadow:var(--shadow)}.stat .n{font-size:23px;font-weight:800;color:var(--blue)}.stat .l{font-size:11px;color:var(--muted);margin-top:3px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:15px;margin:12px 0;box-shadow:var(--shadow)}.card h2{font-size:16px;margin:0 0 12px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.pill{font-size:11px;border-radius:99px;padding:5px 9px;background:var(--blue2);color:var(--blue);font-weight:700}.btn{border:0;background:var(--blue);color:white;padding:11px 14px;border-radius:12px;font-weight:700}.btn.light{background:var(--blue2);color:var(--blue)}.btn.danger{background:#fff0f0;color:var(--red)}.btn.small{padding:7px 10px;font-size:12px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px}.quick{background:white;border:1px solid var(--line);border-radius:16px;padding:14px;text-align:left;color:var(--ink);min-height:94px}.quick .ico{font-size:23px}.quick b{display:block;margin-top:8px}.quick small{color:var(--muted)}.nav{position:fixed;bottom:0;left:0;right:0;z-index:5;background:#ffffffed;backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:8px 5px calc(8px + env(safe-area-inset-bottom));display:flex;justify-content:center}.navin{width:min(760px,100%);display:grid;grid-template-columns:repeat(5,1fr);gap:3px}.nav button{border:0;background:transparent;color:#75869b;font-size:10px;padding:6px 2px;border-radius:11px}.nav button span{display:block;font-size:20px;margin-bottom:3px}.nav button.active{background:var(--blue2);color:var(--blue);font-weight:800}.section{display:none}.section.active{display:block}.field{margin:10px 0}.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:5px;font-weight:700}.field input,.field select,.field textarea{width:100%;border:1px solid #dce5ef;border-radius:11px;padding:11px;background:white;color:var(--ink);outline:none}.field textarea{min-height:70px;resize:vertical}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.item{padding:12px 0;border-top:1px solid var(--line)}.item:first-child{border-top:0}.itemtitle{font-weight:750}.meta{font-size:12px;color:var(--muted);margin-top:4px}.actions{display:flex;gap:7px;margin-top:8px;flex-wrap:wrap}.empty{padding:22px;text-align:center;color:var(--muted);font-size:13px}.daytabs{display:flex;gap:6px;overflow:auto;padding:2px 0 10px}.daytabs button{white-space:nowrap;border:1px solid var(--line);background:white;padding:8px 12px;border-radius:99px;color:var(--muted);font-size:12px}.daytabs button.active{background:var(--blue);color:white;border-color:var(--blue)}.timeline{border-left:2px solid #d9e9fb;margin-left:8px;padding-left:15px}.slot{position:relative;padding:2px 0 15px}.slot:before{content:"";position:absolute;left:-22px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--blue);border:2px solid white;box-shadow:0 0 0 2px #cfe3fb}.time{font-size:11px;color:var(--blue);font-weight:800}.slotname{font-size:13px;font-weight:650;margin-top:3px}.checkline{display:flex;align-items:center;gap:8px}.checkline input{width:18px;height:18px;accent-color:var(--blue)}.progress{height:8px;border-radius:20px;background:#eaf0f7;overflow:hidden}.progress>i{display:block;height:100%;background:var(--blue);border-radius:20px}.muted{color:var(--muted)}.notice{background:#fff8e8;border:1px solid #f2dfb4;color:#7a5b17;border-radius:12px;padding:11px;font-size:12px;line-height:1.5}.footer{text-align:center;color:#91a0b2;font-size:10px;padding:20px 8px}
+@media(min-width:600px){.container{padding:22px}.top{padding:26px 24px}.stats{gap:13px}.card{padding:18px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top"><div class="topline"><div><div class="brand">My Life</div><div class="date" id="todayLabel"></div></div><div class="avatar">🏀</div></div></header>
+<main class="container">
+<section id="home" class="section active">
+<div class="greeting">今日安排，一步一步完成。</div><div class="sub">學習、運動與休息，保持平衡。</div>
+<div class="stats"><div class="stat"><div class="n" id="homeHomework">0</div><div class="l">未完成功課</div></div><div class="stat"><div class="n" id="homeExam">0</div><div class="l">即將到來考試</div></div><div class="stat"><div class="n" id="homeDict">0</div><div class="l">待準備默書</div></div></div>
+<div class="card"><div class="row"><h2>今日時間表</h2><span class="pill" id="todayDay"></span></div><div id="todaySchedule"></div></div>
+<div class="grid2">
+<button class="quick" onclick="go('homework')"><span class="ico">📚</span><b>功課管理</b><small>新增及完成打卡</small></button>
+<button class="quick" onclick="go('exams')"><span class="ico">📝</span><b>考試追蹤</b><small>日期及溫習進度</small></button>
+<button class="quick" onclick="go('dictation')"><span class="ico">✍️</span><b>默書管理</b><small>範圍及分數</small></button>
+<button class="quick" onclick="go('basketball')"><span class="ico">🏀</span><b>籃球紀錄</b><small>訓練及心得</small></button>
+</div>
+<div class="card"><h2>快速提醒</h2><div class="sub">星期五、六：21:00–23:00 籃球；星期日：17:30–19:15 籃球。星期日晚飯安排為 19:15–20:00。</div></div>
+</section>
+
+<section id="schedule" class="section">
+<div class="greeting">每週時間表</div><div class="sub">選擇星期查看固定安排。可按實際功課量彈性調整。</div>
+<div class="card"><div class="daytabs" id="dayTabs"></div><div id="scheduleList"></div></div>
+</section>
+
+<section id="homework" class="section">
+<div class="greeting">功課管理</div><div class="sub">記下科目、內容及截止日期。</div>
+<div class="card"><h2>新增功課</h2><form id="hwForm">
+<div class="formgrid"><div class="field"><label>科目</label><input name="subject" required placeholder="例如：數學"></div><div class="field"><label>截止日期</label><input name="due" type="date" required></div></div>
+<div class="field"><label>功課內容</label><input name="task" required placeholder="例如：完成工作紙 P.12"></div><button class="btn" type="submit">＋ 新增功課</button>
+</form></div><div class="card"><div class="row"><h2>功課清單</h2><span class="pill" id="hwCount">0 項未完成</span></div><div id="hwList"></div></div>
+</section>
+
+<section id="exams" class="section">
+<div class="greeting">考試追蹤</div><div class="sub">記錄考試日期，掌握準備進度。</div>
+<div class="card"><h2>新增考試</h2><form id="examForm">
+<div class="formgrid"><div class="field"><label>科目</label><input name="subject" required placeholder="例如：英文"></div><div class="field"><label>考試日期</label><input name="date" type="date" required></div></div>
+<div class="field"><label>溫習進度</label><select name="progress"><option value="0">尚未開始</option><option value="25">25%</option><option value="50">50%</option><option value="75">75%</option><option value="100">已完成</option></select></div>
+<button class="btn" type="submit">＋ 新增考試</button></form></div>
+<div class="card"><h2>考試清單</h2><div id="examList"></div></div>
+</section>
+
+<section id="dictation" class="section">
+<div class="greeting">默書管理</div><div class="sub">記錄默書日期、範圍及成績，整理容易出錯的內容。</div>
+<div class="card"><h2>新增默書</h2><form id="dictForm">
+<div class="formgrid"><div class="field"><label>科目</label><input name="subject" required placeholder="例如：中文"></div><div class="field"><label>默書日期</label><input name="date" type="date" required></div></div>
+<div class="field"><label>默書範圍</label><input name="scope" required placeholder="例如：第 3 課詞語"></div>
+<div class="formgrid"><div class="field"><label>分數（可稍後填）</label><input name="score" type="number" min="0" max="100" placeholder="未考可留空"></div><div class="field"><label>滿分</label><input name="total" type="number" min="1" value="100"></div></div>
+<button class="btn" type="submit">＋ 新增默書</button></form></div>
+<div class="card"><h2>默書紀錄</h2><div id="dictList"></div></div>
+</section>
+
+<section id="basketball" class="section">
+<div class="greeting">籃球訓練紀錄</div><div class="sub">簡單記錄每次訓練，觀察自己的持續進步。</div>
+<div class="card"><h2>新增訓練紀錄</h2><form id="ballForm">
+<div class="formgrid"><div class="field"><label>訓練日期</label><input name="date" type="date" required></div><div class="field"><label>訓練時間</label><select name="duration"><option>30 分鐘</option><option>45 分鐘</option><option>60 分鐘</option><option>90 分鐘</option><option>105 分鐘</option><option>120 分鐘</option><option>其他</option></select></div></div>
+<div class="field"><label>訓練內容</label><select name="kind"><option>運球</option><option>投籃</option><option>突破</option><option>防守</option><option>體能</option><option>實戰</option><option>綜合訓練</option></select></div>
+<div class="field"><label>今日心得（選填）</label><textarea name="note" placeholder="例如：右手突破較順，左手控球仍需加強"></textarea></div>
+<button class="btn" type="submit">＋ 儲存訓練紀錄</button></form></div>
+<div class="card"><h2>訓練紀錄</h2><div id="ballList"></div></div>
+</section>
+
+<section id="stats" class="section">
+<div class="greeting">每週統計</div><div class="sub">從你記錄的資料了解本週進度。</div>
+<div class="stats"><div class="stat"><div class="n" id="statHW">0%</div><div class="l">功課完成率</div></div><div class="stat"><div class="n" id="statBall">0</div><div class="l">籃球紀錄</div></div><div class="stat"><div class="n" id="statStudy">0</div><div class="l">考試項目</div></div></div>
+<div class="card"><h2>功課完成情況</h2><div class="progress"><i id="hwProgress" style="width:0%"></i></div><div class="meta" id="hwProgressText">尚未有功課紀錄</div></div>
+<div class="card"><h2>本週籃球訓練</h2><div id="weeklyBall"></div></div>
+<div class="card"><h2>資料備份與還原</h2><p class="sub">資料只保存在目前 iPhone 的瀏覽器本機儲存空間。建議定期匯出備份。</p><div class="actions"><button class="btn light" onclick="exportData()">匯出備份</button><label class="btn light" for="importFile">匯入備份</label><input id="importFile" type="file" accept="application/json" hidden></div><p class="meta">清除 Safari 網站資料、移除網站資料或更換裝置，可能令紀錄遺失；匯出備份可避免資料無法復原。</p></div>
+<div class="notice">私隱提示：本版本不會把資料傳送到伺服器；但本機資料並非加密保險箱，請勿記錄密碼、身份證號碼等敏感資料。</div>
+</section>
+<div class="footer">MY LIFE · 個人生活管理 · 本機資料版本</div>
+</main>
+<nav class="nav"><div class="navin">
+<button class="active" data-go="home"><span>⌂</span>首頁</button><button data-go="schedule"><span>▦</span>日程</button><button data-go="homework"><span>✓</span>功課</button><button data-go="exams"><span>▤</span>學習</button><button data-go="stats"><span>◷</span>統計</button>
+</div></nav>
+</div>
+<script>
+const KEY='mylife-local-v1';
+let data={homework:[],exams:[],dictations:[],basketball:[]};
+try{const saved=JSON.parse(localStorage.getItem(KEY)||'null');if(saved)data={...data,...saved}}catch(e){}
+const $=id=>document.getElementById(id);
+const todayISO=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function save(){localStorage.setItem(KEY,JSON.stringify(data));renderAll()}
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
+function go(id){document.querySelectorAll('.section').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.go===id));if(id==='dictation'){};window.scrollTo(0,0);renderAll()}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
+document.querySelectorAll('.quick').forEach(()=>{});
+const days=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+const plans={
+'星期一':[['07:00–07:45','起床、梳洗、早餐'],['08:00–19:00','日常活動（已於 19:00 到家）'],['19:00–19:45','晚飯'],['19:45–20:15','休息、洗澡'],['20:15–21:00','功課'],['21:00–21:15','休息'],['21:15–21:45','溫習'],['21:45–22:00','整理、放鬆'],['22:00','睡覺']],
+'星期二':[['07:00–07:45','起床、梳洗、早餐'],['08:00–17:00','日常活動（已於 17:00 到家）'],['17:00–17:30','休息、小食'],['17:30–18:15','功課'],['18:15–18:45','輕量活動／伸展'],['19:00–19:45','晚飯'],['19:45–20:15','洗澡、休息'],['20:15–21:00','溫習'],['21:00–21:15','休息'],['21:15–21:45','功課／溫習'],['22:00','睡覺']],
+'星期三':[['07:00–07:45','起床、梳洗、早餐'],['08:00–17:00','日常活動（已於 17:00 到家）'],['17:00–17:30','休息、小食'],['17:30–18:15','功課'],['18:15–18:45','體能／上肢訓練'],['19:00–19:45','晚飯'],['19:45–20:15','洗澡、休息'],['20:15–21:00','溫習'],['21:00–21:15','休息'],['21:15–21:45','功課／溫習'],['22:00','睡覺']],
+'星期四':[['07:00–07:45','起床、梳洗、早餐'],['08:00–19:00','日常活動（已於 19:00 到家）'],['19:00–19:45','晚飯'],['19:45–20:15','休息、洗澡'],['20:15–21:00','功課'],['21:00–21:15','休息'],['21:15–21:45','溫習'],['21:45–22:00','整理、放鬆'],['22:00','睡覺']],
+'星期五':[['07:00–07:45','起床、梳洗、早餐'],['08:00–17:00','日常活動（已於 17:00 到家）'],['17:00–18:00','休息、功課'],['18:00–18:45','溫習／功課'],['19:00–19:45','晚飯'],['19:45–20:40','休息、準備籃球'],['21:00–23:00','籃球訓練'],['23:00–23:30','洗澡、放鬆'],['23:30','睡覺']],
+'星期六':[['08:30–09:00','起床、早餐'],['09:00–10:00','溫習弱項科目'],['10:00–10:15','休息'],['10:15–11:15','功課'],['11:15–12:00','自由時間'],['12:00–13:00','午飯'],['13:00–14:30','休息、自由活動'],['14:30–15:30','溫習其他科目'],['15:30–18:00','娛樂、自由時間'],['18:00–19:00','晚飯'],['19:00–20:40','休息、準備籃球'],['21:00–23:00','籃球訓練'],['23:00–23:30','洗澡、放鬆'],['23:30','睡覺']],
+'星期日':[['08:30–09:00','起床、早餐'],['09:00–10:00','溫習弱項科目'],['10:00–10:15','休息'],['10:15–11:00','功課'],['11:00–12:00','自由時間'],['12:00–13:00','午飯'],['13:00–14:00','散步／輕量活動'],['14:00–15:00','休息、娛樂'],['15:00–16:00','溫習及自我測試'],['16:00–17:15','休息、準備籃球'],['17:30–19:15','籃球訓練'],['19:15–20:00','晚飯'],['20:00–20:30','洗澡、休息'],['20:30–21:00','整理下週用品'],['21:00–22:00','自由時間'],['22:00','睡覺']]
+};
+let selectedDay=days[new Date().getDay()];
+function renderSchedule(){ $('dayTabs').innerHTML=['星期一','星期二','星期三','星期四','星期五','星期六','星期日'].map(d=>`<button class="${d===selectedDay?'active':''}" onclick="selectedDay='${d}';renderSchedule()">${d.slice(2)}</button>`).join('');$('scheduleList').innerHTML=`<div class="timeline">${plans[selectedDay].map(x=>`<div class="slot"><div class="time">${x[0]}</div><div class="slotname">${x[1]}</div></div>`).join('')}</div>`}
+function renderToday(){let d=days[new Date().getDay()];$('todayDay').textContent=d;$('todaySchedule').innerHTML=plans[d].slice(0,7).map(x=>`<div class="item"><div class="row"><span class="itemtitle">${x[1]}</span><span class="meta">${x[0]}</span></div></div>`).join('')}
+function renderHomework(){$('hwCount').textContent=data.homework.filter(x=>!x.done).length+' 項未完成';$('hwList').innerHTML=data.homework.length?data.homework.sort((a,b)=>a.due.localeCompare(b.due)).map(x=>`<div class="item"><div class="checkline"><input type="checkbox" ${x.done?'checked':''} onchange="toggle('homework','${x.id}')"><div style="flex:1"><div class="itemtitle" style="${x.done?'text-decoration:line-through;color:#8291a3':''}">${esc(x.subject)} · ${esc(x.task)}</div><div class="meta">截止：${esc(x.due)}</div></div></div><div class="actions"><button class="btn danger small" onclick="removeItem('homework','${x.id}')">刪除</button></div></div>`).join(''):'<div class="empty">還未有功課，新增一項開始管理吧。</div>'}
+function renderExams(){$('examList').innerHTML=data.exams.length?data.exams.sort((a,b)=>a.date.localeCompare(b.date)).map(x=>{let diff=Math.ceil((new Date(x.date+'T00:00:00')-new Date(todayISO()+'T00:00:00'))/86400000);return `<div class="item"><div class="row"><div class="itemtitle">${esc(x.subject)}</div><span class="pill">${diff<0?'已過期':diff===0?'今天考試':'還有 '+diff+' 日'}</span></div><div class="meta">考試日期：${esc(x.date)}</div><div class="row" style="margin-top:9px"><span class="meta">溫習進度</span><b>${x.progress}%</b></div><div class="progress"><i style="width:${x.progress}%"></i></div><div class="actions"><button class="btn light small" onclick="changeProgress('${x.id}')">更新進度</button><button class="btn danger small" onclick="removeItem('exams','${x.id}')">刪除</button></div></div>`}).join(''):'<div class="empty">尚未加入考試。</div>'}
+function renderDict(){$('dictList').innerHTML=data.dictations.length?data.dictations.sort((a,b)=>a.date.localeCompare(b.date)).map(x=>`<div class="item"><div class="row"><div class="itemtitle">${esc(x.subject)}</div><span class="pill">${x.score===''?'待考／待填分數':esc(x.score)+' / '+esc(x.total)}</span></div><div class="meta">${esc(x.date)} · ${esc(x.scope)}</div><div class="actions"><button class="btn light small" onclick="editScore('${x.id}')">記錄／修改分數</button><button class="btn danger small" onclick="removeItem('dictations','${x.id}')">刪除</button></div></div>`).join(''):'<div class="empty">尚未加入默書。</div>'}
+function renderBall(){$('ballList').innerHTML=data.basketball.length?data.basketball.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<div class="item"><div class="row"><div class="itemtitle">${esc(x.kind)}</div><span class="pill">${esc(x.duration)}</span></div><div class="meta">${esc(x.date)}</div>${x.note?`<p class="sub">${esc(x.note)}</p>`:''}<div class="actions"><button class="btn danger small" onclick="removeItem('basketball','${x.id}')">刪除</button></div></div>`).join(''):'<div class="empty">尚未有訓練紀錄。完成訓練後記下心得吧。</div>'}
+function renderStats(){let total=data.homework.length,done=data.homework.filter(x=>x.done).length,pct=total?Math.round(done/total*100):0;$('statHW').textContent=pct+'%';$('hwProgress').style.width=pct+'%';$('hwProgressText').textContent=total?`${done} / ${total} 項功課已完成`:'尚未有功課紀錄';let now=new Date(),start=new Date(now);start.setDate(now.getDate()-((now.getDay()+6)%7));start.setHours(0,0,0,0);let count=data.basketball.filter(x=>new Date(x.date+'T00:00:00')>=start).length;$('statBall').textContent=count;$('statStudy').textContent=data.exams.length;$('weeklyBall').innerHTML=count?data.basketball.filter(x=>new Date(x.date+'T00:00:00')>=start).map(x=>`<div class="item"><b>${esc(x.date)}</b> · ${esc(x.kind)} · ${esc(x.duration)}</div>`).join(''):'<div class="empty">本週尚未記錄籃球訓練。</div>'}
+function renderHomeStats(){$('homeHomework').textContent=data.homework.filter(x=>!x.done).length;$('homeExam').textContent=data.exams.filter(x=>x.date>=todayISO()).length;$('homeDict').textContent=data.dictations.filter(x=>x.date>=todayISO()).length}
+function renderAll(){renderToday();renderSchedule();renderHomework();renderExams();renderDict();renderBall();renderStats();renderHomeStats()}
+function removeItem(type,id){if(confirm('確定刪除此紀錄？')){data[type]=data[type].filter(x=>x.id!==id);save()}}
+function toggle(type,id){let x=data[type].find(x=>x.id===id);if(x){x.done=!x.done;save()}}
+function changeProgress(id){let x=data.exams.find(x=>x.id===id);if(x){let v=prompt('輸入溫習進度（0–100）',x.progress);if(v!==null&&Number.isFinite(+v)&&+v>=0&&+v<=100){x.progress=+v;save()}}}
+function editScore(id){let x=data.dictations.find(x=>x.id===id);if(x){let v=prompt('輸入默書分數',x.score);if(v!==null&&(v===''||(Number.isFinite(+v)&&+v>=0&&+v<=+x.total))){x.score=v;save()}}}
+$('hwForm').addEventListener('submit',e=>{e.preventDefault();let f=new FormData(e.target);data.homework.push({id:uid(),subject:f.get('subject'),due:f.get('due'),task:f.get('task'),done:false});e.target.reset();save()});
+$('examForm').addEventListener('submit',e=>{e.preventDefault();let f=new FormData(e.target);data.exams.push({id:uid(),subject:f.get('subject'),date:f.get('date'),progress:+f.get('progress')});e.target.reset();save()});
+$('dictForm').addEventListener('submit',e=>{e.preventDefault();let f=new FormData(e.target);data.dictations.push({id:uid(),subject:f.get('subject'),date:f.get('date'),scope:f.get('scope'),score:f.get('score'),total:f.get('total')||100});e.target.reset();save()});
+$('ballForm').addEventListener('submit',e=>{e.preventDefault();let f=new FormData(e.target);data.basketball.push({id:uid(),date:f.get('date'),duration:f.get('duration'),kind:f.get('kind'),note:f.get('note')});e.target.reset();save()});
+function exportData(){let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='my-life-backup-'+todayISO()+'.json';a.click();URL.revokeObjectURL(a.href)}
+$('importFile').addEventListener('change',async e=>{let f=e.target.files[0];if(!f)return;try{let obj=JSON.parse(await f.text());if(!obj||!Array.isArray(obj.homework)||!Array.isArray(obj.exams)||!Array.isArray(obj.dictations)||!Array.isArray(obj.basketball))throw Error();if(confirm('匯入會取代目前資料，確定繼續？')){data=obj;save();alert('備份匯入成功')}}catch(err){alert('檔案格式不正確，無法匯入')}e.target.value=''});
+$('todayLabel').textContent=new Intl.DateTimeFormat('zh-HK',{year:'numeric',month:'long',day:'numeric',weekday:'long'}).format(new Date());
+renderAll();
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+</script>
+</body></html>
